@@ -1,0 +1,22 @@
+TOP1 = (overlay-xy(square(100,"solid", "fire-brick"),
+    130,0,
+    rectangle(40, 140, "solid", "dark-blue")))
+ 
+TOP2 = (overlay-xy(TOP1, 
+    200, 0,
+    square(100,"solid", "fire-brick")))
+ 
+ 
+TOP3 = (overlay-xy(TOP2, 
+    300, 0,
+    square(100,"solid", "fire-brick")))
+ 
+ 
+Midt = (overlay-xy(TOP3, 
+    0, 120,
+    rectangle(400, 40, "solid", "dark-blue")))
+ 
+BUNN = (overlay-xy(Midt, 
+    0, 140,
+    flip-vertical(TOP3)))
+BUNN
