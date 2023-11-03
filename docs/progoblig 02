@@ -1,0 +1,24 @@
+fun draw-flagg(c1, c2, c3) -> Image:
+  doc: "produserer ett skandinavisk korsflagg"
+  
+    overlay-xy(rectangle(30, 240, "solid", c3), -105, 0,
+      overlay-xy(rectangle(330, 30, "solid", c3), 0, -105,
+        overlay-xy(rectangle(60, 240, "solid", c2), -90, 0,
+          overlay-xy(rectangle(330, 60, "solid", c2), 0, -90,
+            rectangle(330, 240, "solid", c1)))))
+end
+
+Norge = draw-flagg("fire-brick", "White", "dark-blue")
+Sverige = draw-flagg("dark-blue", "dark-blue", "yellow")
+Danmark = draw-flagg("red", "red", "white")
+Finland = draw-flagg("white", "dark-blue", "dark-blue")
+Island = draw-flagg("dark-blue", "white", "red")
+Faeroyene = draw-flagg("white", "blue", "red")
+Skandinavia = frame(
+  above( Norge,
+    above( Sverige,
+      above( Danmark,
+        above( Finland,
+          above( Island, Faeroyene))))))
+
+Skandinavia
