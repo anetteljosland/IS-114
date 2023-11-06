@@ -1,0 +1,26 @@
+use context essentials2021
+include color
+fun draw-flagg(c1, c2, c3) -> Image:
+  doc: "produserer ett skandinavisk korsflagg"
+  
+    overlay-xy(rectangle(30, 240, "solid", c3), -105, 0,
+      overlay-xy(rectangle(330, 30, "solid", c3), 0, -105,
+        overlay-xy(rectangle(60, 240, "solid", c2), -90, 0,
+          overlay-xy(rectangle(330, 60, "solid", c2), 0, -90,
+            rectangle(330, 240, "solid", c1)))))
+end
+
+Norge = draw-flagg(color(186, 12, 47,1) , color(255, 255, 255,1) , color(0, 32, 91,1))
+Sverige = draw-flagg(color(0, 106, 167, 1) , color(254, 204, 2, 1), color(254, 204, 2, 1))
+Danmark = draw-flagg(color(200, 16, 46, 1) , color(255, 255, 255,1) , color(255, 255, 255,1))
+Finland = draw-flagg(color(255, 255, 255,1) , color(0, 47, 108,1) , color(0, 47, 108,1))
+Island = draw-flagg(color(2, 82, 156,1) , color(255, 255, 255,1) , color(220, 30, 53,1))
+Faeroyene = draw-flagg(color(255, 255, 255,1) , color(	0, 101, 189,1) , color(237, 41, 57,1))
+Skandinavia = frame(
+  above( Norge,
+    above( Sverige,
+      above( Danmark,
+        above( Finland,
+          above( Island, Faeroyene))))))
+
+Skandinavia
